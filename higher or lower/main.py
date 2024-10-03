@@ -21,6 +21,8 @@ def higher_or_lower():
     score = 0
     choice_a = random.choice(data)
     choice_b = random.choice(data)
+    if choice_a == choice_b:
+        choice_b = random.choice(data)
 
     while not game_over:
         print_choices(choice_a, choice_b)
@@ -32,12 +34,14 @@ def higher_or_lower():
             if user_choice == 'b':
                 choice_a = choice_b
             choice_b = random.choice(data)
+            if choice_a == choice_b:
+                choice_b = random.choice(data)
         else:
             game_over = True
 
     if game_over:
         print(f"Oops... You lose! Your score is: {score}")
-        print(f"{choice_a.get('name')} has {choice_a.get('follower_count')}")
-        print(f"{choice_b.get('name')} has {choice_b.get('follower_count')}")
+        print(f"{choice_a.get('name')} has {choice_a.get('follower_count')} million followers")
+        print(f"{choice_b.get('name')} has {choice_b.get('follower_count')} million followers")
 
 higher_or_lower()
