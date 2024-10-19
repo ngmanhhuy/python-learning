@@ -40,7 +40,7 @@ def print_winner(color):
         winner_message = "You've won! The {winning_color} turtle is the winner!"
     else:
         winner_message = "You've lost! The {winning_color} turtle is the winner!"
-    write(winner_message.format(winning_color=color), align="center", font=("Arial", 18, "bold"))
+    write(winner_message.format(winning_color=color), align="center", font=("Impact", 18, "bold"))
 
 if user_bet:
     is_racing = True
